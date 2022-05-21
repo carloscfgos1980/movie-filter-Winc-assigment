@@ -40,7 +40,7 @@ addMoviesToDom(movies);
 
 let radioBtns = document.querySelectorAll("input[name='film-filter']");
 console.log(radioBtns);
-/*
+/* Here I manage to check that the radio buttons work properly
 const handleOnChangeEvent = (event) => {
     radioBtns.forEach((radiobtn) => {
         radiobtn.addEventListener('change', (event) => {
