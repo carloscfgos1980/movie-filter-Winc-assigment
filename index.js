@@ -35,11 +35,11 @@ const addMoviesToDom = movies => {
 
 }
 
-addMoviesToDom(movies);
+
 
 
 let radioBtns = document.querySelectorAll("input[name='film-filter']");
-console.log(radioBtns);
+//console.log(radioBtns);
 /*
 const handleOnChangeEvent = (event) => {
     radioBtns.forEach((radiobtn) => {
@@ -56,6 +56,43 @@ const handleOnChangeEvent = (event) => {
 handleOnChangeEvent(event);
 */
 
+const newestMovies = movies.filter((movie) => {
+
+    return movie.year > 2014
+})
+
+const filterLatestMovies = () => {
+    addMoviesToDom(newestMovies);
+}
+
+/*
+
+
+/*
+const movieGenders = movies.filter((movie) => {
+
+    const wordInMovie = "Avengers";
+    return movie.title.includes(wordInMovie);
+
+})
+
+console.log(movieGenders);
+*/
+
+
+const filteredMovies = wordInMovie =>
+
+    addMoviesToDom(movies.filter((movie) => movie.title.includes(wordInMovie)));
+
+
+
+// addMoviesToDom(movieGenders);
+
+
+
+//console.log(filteredMovies("Avengers"));
+
+
 
 const handleOnChangeEvent = (event) => {
     radioBtns.forEach((radiobtn) => {
@@ -65,19 +102,22 @@ const handleOnChangeEvent = (event) => {
 
             switch (event.target.value) {
                 case "new-movies":
-                    console.log("hello New Movies");
+                    filterLatestMovies();
                     break;
                 case "avengers":
-                    console.log("hello Avengers");
+                    filteredMovies("Avengers");
                     break;
                 case "x-men":
-                    console.log("hello Xmen");
+                    filteredMovies("X-Men");
                     break;
                 case "princess":
-                    console.log("hello Princess");
+                    filteredMovies("Princess");
                     break;
                 case "batman":
-                    console.log("hello batman");
+                    filteredMovies("Batman");
+                    break;
+                case "all-movies":
+                    addMoviesToDom(movies);
                     break;
                 default:
                     addMoviesToDom(movies);
