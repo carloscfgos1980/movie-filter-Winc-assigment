@@ -1,9 +1,5 @@
 
-
 let movieList = document.querySelector('#movie-list');
-
-
-
 
 
 const addMoviesToDom = movies => {
@@ -35,9 +31,6 @@ const addMoviesToDom = movies => {
 
 }
 
-
-
-
 let radioBtns = document.querySelectorAll("input[name='film-filter']");
 //console.log(radioBtns);
 /*
@@ -59,25 +52,13 @@ handleOnChangeEvent(event);
 const newestMovies = movies.filter((movie) => {
 
     return movie.year > 2014
+
 })
 
 const filterLatestMovies = () => {
+
     addMoviesToDom(newestMovies);
 }
-
-/*
-
-
-/*
-const movieGenders = movies.filter((movie) => {
-
-    const wordInMovie = "Avengers";
-    return movie.title.includes(wordInMovie);
-
-})
-
-console.log(movieGenders);
-*/
 
 
 const filteredMovies = wordInMovie =>
@@ -98,13 +79,15 @@ const handleOnChangeEvent = (event) => {
     radioBtns.forEach((radiobtn) => {
         radiobtn.addEventListener('change', (event) => {
 
-            //console.log(event.target.value)
-
             switch (event.target.value) {
                 case "new-movies":
+                    console.log(movieList);
                     filterLatestMovies();
                     break;
                 case "avengers":
+                    let li = movieList.getElementsByTagName('li');
+                    console.log(li);
+                    //movieList.removeChild(li);
                     filteredMovies("Avengers");
                     break;
                 case "x-men":
@@ -131,49 +114,3 @@ const handleOnChangeEvent = (event) => {
 
 
 handleOnChangeEvent(event);
-
-
-
-
-/*
-for (const radioBtn of radioBtns) {
-    radioBtn.onclick = (e) => {
-        console.log(e.target.value);
-    }
-}
-
-*/
-
-/*
-const handleOnChangeEvent = (event) => {
-
-    radioBtns.addEventListener('change', (event) => {
-
-        switch (event.target.value) {
-            case 'new-movies':
-                let message1 = 'hello new-movies';
-                console.log(message2);
-                break;
-            case 'avengers':
-                let message2 = 'hello avengers';
-                console.log(message2);
-                break;
-            case 'x-men':
-                let message3 = 'hello x-men';
-                console.log(message3);
-                break;
-            case 'princess':
-                let message4 = 'hello princess';
-                console.log(message4);
-                break;
-            case 'batman':
-                let message5 = 'hello batman';
-                console.log(message5);
-                break;
-
-        }
-    })
-
-}
-
-*/
