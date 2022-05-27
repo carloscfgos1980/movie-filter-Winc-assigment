@@ -1,6 +1,7 @@
 
 let movieList = document.querySelector('#movie-list');
 
+
 const addMoviesToDom = movies => {
 
     const allMovies = movies.map((movie) => {
@@ -34,7 +35,6 @@ let radioBtns = document.querySelectorAll("input[name='film-filter']");
 //console.log(radioBtns);
 
 
-
 const newestMovies = movies.filter((movie) => {
 
     return movie.year > 2014
@@ -47,7 +47,6 @@ const filterLatestMovies = () => {
 }
 
 
-
 /*
 const movieGenders = movies.filter((movie) => {
 
@@ -57,15 +56,16 @@ const movieGenders = movies.filter((movie) => {
 })
 
 console.log(movieGenders);
-
- addMoviesToDom(movieGenders);
 */
 
 // Short version of the function above
 const filteredMovies = wordInMovie => addMoviesToDom(movies.filter((movie) => movie.title.includes(wordInMovie)));
 
+// addMoviesToDom(movieGenders);
+
 
 //console.log(filteredMovies("Avengers"));
+
 /*
 const removedList = () => {
 
@@ -81,13 +81,14 @@ const eraseMovie = () => {
 
 }
 
+
 /*
+// Checking that  all the buttons work
 for (const radioBtn of radioBtns) {
     radioBtn.onclick = (e) => {
         console.log(e.target.value);
     }
 }
-
 */
 
 /*
@@ -101,8 +102,6 @@ const handleOnChangeEvent = (event) => {
 
     })
 }
-
-
 handleOnChangeEvent(event);
 */
 
@@ -144,4 +143,5 @@ const handleOnChangeEvent = (event) => {
 
 
 handleOnChangeEvent(event);
+
 
