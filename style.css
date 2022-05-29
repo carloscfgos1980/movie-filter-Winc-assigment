@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: lightblue;
+  list-style: none;
+}
+
+body header .film-finder img {
+  width: 100px;
+}
+
+body header .film-finder h1 {
+  margin-left: 30%;
+  font-size: 40px;
+  background-color: red;
+  text-shadow: 6px 2px black;
+  font-weight: bold;
+  color: lightblue;
+  padding: 5px;
+  border-radius: 15%;
+  border: 6px solid black;
+  position: absolute;
+  top: 35px;
+}
+
+body header nav {
+  margin: 5% 3% 3% 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header nav input {
+  margin-left: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  block-size: 14px;
+  inline-size: 12px;
+  accent-color: black;
+}
+
+body header nav label {
+  margin-left: 8px;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  background-color: red;
+  text-shadow: 2px 2px black;
+  width: 100px;
+  font-weight: bold;
+  color: lightblue;
+  padding: 5px;
+  border-radius: 15%;
+  border: 2px solid black;
+}
+
+body main #movie-list {
+  background-color: red;
+  margin: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+body main #movie-list li {
+  margin: 40px 20px;
+}
+
+body main #movie-list li img {
+  width: 400px;
+}
+
+@media only screen and (min-width: 768px) {
+  body header .film-finder h1 {
+    background-color: orange;
+    margin-left: 40%;
+  }
+  body header nav {
+    display: block;
+    position: relative;
+  }
+  body header nav input {
+    margin-left: 30px;
+    block-size: 16px;
+    inline-size: 18px;
+  }
+  body header nav label {
+    background-color: orange;
+    font-size: 22px;
+    padding: 7px;
+    border: 3px solid black;
+    text-shadow: 3px 2px black;
+  }
+  body main #movie-list {
+    background-color: orange;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body header .film-finder h1 {
+    background-color: green;
+    margin-left: 40%;
+  }
+  body header nav {
+    display: block;
+    position: relative;
+  }
+  body header nav input {
+    margin-left: 50px;
+    block-size: 16px;
+    inline-size: 18px;
+  }
+  body header nav label {
+    background-color: green;
+    font-size: 30px;
+    padding: 7px;
+    border: 4px solid black;
+    text-shadow: 4px 2px black;
+  }
+  body main #movie-list {
+    background-color: green;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+/*# sourceMappingURL=style.css.map */
