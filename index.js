@@ -4,12 +4,7 @@ let movieList = document.querySelector('#movie-list');
 
 const addMoviesToDom = movies => {
 
-    const allMovies = movies.map((movie) => {
-
-        let movieTitle = document.createElement('li');
-        movieTitle.innerHTML = '';
-    }
-    )
+    document.getElementById("movie-list").innerHTML = "";
 
     movies.forEach((movie) => {
 
@@ -26,8 +21,7 @@ const addMoviesToDom = movies => {
         film.appendChild(anchorTag);
         anchorTag.append(image);
         movieList.appendChild(film);
-    }
-    )
+    })
 
 }
 
@@ -75,11 +69,6 @@ const removedList = () => {
 *>>> I didn't work
 }
 */
-const eraseMovie = () => {
-
-    document.getElementById("movie-list").innerHTML = "";
-
-}
 
 
 /*
@@ -105,33 +94,33 @@ const handleOnChangeEvent = (event) => {
 handleOnChangeEvent(event);
 */
 
-const handleOnChangeEvent = (event) => {
+const handleOnChangeEvent = () => {
     radioBtns.forEach((radiobtn) => {
         radiobtn.addEventListener('change', (event) => {
 
             switch (event.target.value) {
                 case "new-movies":
-                    eraseMovie();
+
                     filterLatestMovies();
                     break;
                 case "avengers":
-                    eraseMovie();
+
                     filteredMovies("Avengers");
                     break;
                 case "x-men":
-                    eraseMovie();
+
                     filteredMovies("X-Men");
                     break;
                 case "princess":
-                    eraseMovie();
+
                     filteredMovies("Princess");
                     break;
                 case "batman":
-                    eraseMovie();
+
                     filteredMovies("Batman");
                     break;
                 case "all-movies":
-                    eraseMovie();
+
                     addMoviesToDom(movies);
                     break;
             }
@@ -142,6 +131,6 @@ const handleOnChangeEvent = (event) => {
 }
 
 
-handleOnChangeEvent(event);
+handleOnChangeEvent();
 
 
