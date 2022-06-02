@@ -8,7 +8,6 @@
 
 body {
   background-color: lightblue;
-  max-width: 400px;
   list-style: none;
 }
 
@@ -103,9 +102,6 @@ body main #movie-list li img {
 }
 
 @media only screen and (min-width: 768px) {
-  body {
-    max-width: 768px;
-  }
   body header .film-finder h1 {
     background-color: orange;
     margin-left: 40%;
@@ -147,16 +143,9 @@ body main #movie-list li img {
 }
 
 @media only screen and (min-width: 1200px) {
-  body {
-    max-width: 1200px;
-  }
   body header .film-finder h1 {
     background-color: green;
     margin-left: 40%;
-  }
-  body header nav {
-    display: block;
-    position: relative;
   }
   body header nav input {
     margin-left: 60px;
